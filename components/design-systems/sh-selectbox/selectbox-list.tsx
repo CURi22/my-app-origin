@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 interface SelectboxListParams {
   options: string[];
@@ -23,7 +23,7 @@ export function SelectboxList({
     <div className="sh-selectbox-list-background" onClick={closeList}>
       <div className="sh-selectbox-list-container">
         {options.map((ele: string, idx: number) => (
-          <React.Fragment key={ele}>
+          <Fragment key={ele}>
             {idx !== 0 && <div className="divider" />}
             <div
               className={idx === focusedElement ? "list-focused" : "list"}
@@ -36,7 +36,7 @@ export function SelectboxList({
             >
               <p className="text">{ele}</p>
             </div>
-          </React.Fragment>
+          </Fragment>
         ))}
       </div>
     </div>

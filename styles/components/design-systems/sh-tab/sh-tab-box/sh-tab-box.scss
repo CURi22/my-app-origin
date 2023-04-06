@@ -1,0 +1,38 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+@mixin tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  padding: 6px 16px;
+  border-radius: 31px;
+  .text {
+    @include font-label-S;
+    user-select: none;
+  }
+}
+.sh-tab-box-container {
+  display: flex;
+  width: max-content;
+  padding: 0 10px;
+  .spacer {
+    width: 8px;
+  }
+  .tab {
+    @include tab;
+    background-color: $ui-01;
+    box-shadow: 0 0 0 1px inset #eff2f6;
+    .text {
+      color: #787878;
+    }
+  }
+  .tab-on {
+    @include tab;
+    background-color: #232323;
+    .text {
+      color: $text-04;
+    }
+  }
+}

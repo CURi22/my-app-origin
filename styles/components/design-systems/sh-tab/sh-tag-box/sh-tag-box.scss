@@ -1,0 +1,21 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+.sh-tag-box-container {
+  display: flex;
+  width: max-content;
+  .spacer {
+    width: 7px;
+  }
+  .tab {
+    padding: 0 12.87px;
+    border-radius: 22px;
+    background-color: $ui-01;
+    box-shadow: 0 0 0 1px inset #eff2f6;
+    .text {
+      @include font-label-S;
+      color: #787878;
+      user-select: none;
+    }
+  }
+}

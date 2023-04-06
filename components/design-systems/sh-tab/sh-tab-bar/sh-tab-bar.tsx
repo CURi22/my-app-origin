@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import "styles/components/design-systems/sh-tab-bar/sh-tab-bar.scss";
+import "styles/components/design-systems/sh-tab/sh-tab-bar/sh-tab-bar.scss";
 
 interface SHTabBarParams {
   defaultIdx?: number;
@@ -16,7 +16,7 @@ export function SHTabBar({ defaultIdx, fill, tabs, onClick }: SHTabBarParams) {
 
   function switchTab({ idx }: { idx: number }): void {
     setTabIdx(idx);
-    
+
     onClick({ idx });
   }
 
