@@ -1,0 +1,49 @@
+/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css); */
+@mixin font-face-family-name {
+  font-family: "Spoqa Han Sans Neo";
+  font-style: normal;
+}
+@font-face {
+  @include font-face-family-name;
+  font-weight: 700;
+  src: url("../../public/fonts/SpoqaHanSansNeo-Bold.otf") format("opentype");
+}
+@font-face {
+  @include font-face-family-name;
+  font-weight: 500;
+  src: url("../../public/fonts/SpoqaHanSansNeo-Medium.otf") format("opentype");
+}
+@font-face {
+  @include font-face-family-name;
+  font-weight: 400;
+  src: url("../../public/fonts/SpoqaHanSansNeo-Regular.otf") format("opentype");
+}
+// @font-face {
+//   @include font-face-family-name;
+//   font-weight: 000;
+//   src: url("../../public/fonts/SpoqaHanSansNeo-Light.otf") format("opentype");
+// }
+// @font-face {
+//   @include font-face-family-name;
+//   font-weight: 000;
+//   src: url("../../public/fonts/SpoqaHanSansNeo-Thin.otf") format("opentype");
+// }
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+html,
+body {
+  max-width: 375px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+}
+::-webkit-scrollbar {
+  display: none;
+}

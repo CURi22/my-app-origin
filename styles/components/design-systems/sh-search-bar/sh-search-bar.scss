@@ -1,0 +1,86 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles//design-systems/typography.scss";
+
+@mixin sh-search-bar-container {
+  display: flex;
+  align-items: center;
+  .chevron {
+    margin-right: 20px;
+  }
+}
+@mixin input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  .magnifier {
+    margin-right: 10px;
+  }
+  .input {
+    @include font-body-M;
+    flex: 1;
+  }
+}
+.sh-search-bar-container-fill {
+  @mixin input-container-fill {
+    padding: 0 10px;
+  }
+  @include sh-search-bar-container;
+  .input-container-focused {
+    @include input-container;
+    @include input-container-fill;
+    background-color: $ui-background;
+    border-radius: 10px;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .input-container-enabled {
+    @include input-container;
+    @include input-container-fill;
+    background-color: $ui-background;
+    border-radius: 10px;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .input-container-enabled2 {
+    @include input-container;
+    @include input-container-fill;
+    background-color: $ui-background;
+    border-radius: 10px;
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-search-bar-container-line {
+  @include sh-search-bar-container;
+  .input-container-focused {
+    @include input-container;
+    box-shadow: 0 1px $gray-03;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .input-container-enabled {
+    @include input-container;
+    box-shadow: 0 1px $gray-03;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .input-container-enabled2 {
+    @include input-container;
+    box-shadow: 0 1px $gray-03;
+    .input {
+      color: $text-01;
+    }
+  }
+}

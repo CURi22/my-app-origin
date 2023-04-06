@@ -1,0 +1,110 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+.sh-selectbox-list-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .sh-selectbox-list-container {
+    @mixin list {
+      display: flex;
+      align-items: center;
+      height: 45px;
+      padding: 0 16px;
+      .text {
+        @include font-body-XS;
+      }
+    }
+    width: 219px;
+    backdrop-filter: blur(75px);
+    background-color: rgba($color: #fff, $alpha: 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 12px 39px rgba($color: #000, $alpha: 0.2);
+    overflow: hidden;
+    .divider {
+      height: 1px;
+      background-color: rgba($color: #000, $alpha: 0.2);
+    }
+    .list-focused {
+      @include list;
+      background-color: $interactive-04;
+      .text {
+        color: $inverse-01;
+      }
+    }
+    .list {
+      @include list;
+      .text {
+        color: #19181a;
+      }
+    }
+  }
+}
+@mixin sh-selectbox-container {
+  display: inline-block;
+  .option-container {
+    display: flex;
+    align-items: center;
+    width: 343px;
+    height: 55px;
+    border-radius: 10px;
+    .select-text {
+      flex: 1;
+      padding: 0 12px;
+      text-align: start;
+    }
+    .icon {
+      padding: 0 12px;
+    }
+  }
+}
+.sh-selectbox-container-enabled {
+  @include sh-selectbox-container;
+  .option-container {
+    background-color: $field-02;
+    .select-text {
+      @include font-label-L;
+      color: $text-03;
+    }
+  }
+}
+.sh-selectbox-container-error {
+  @include sh-selectbox-container;
+  .option-container {
+    background-color: $field-04;
+    .select-text {
+      @include font-label-L;
+      color: $text-03;
+    }
+  }
+  .helper {
+    @include font-subhead-M;
+    padding: 3.5px 14px;
+    color: #eb4526;
+  }
+}
+.sh-selectbox-container-focused {
+  @include sh-selectbox-container;
+  .option-container {
+    background-color: $field-03;
+    .select-text {
+      @include font-headline-S;
+      color: $text-02;
+    }
+  }
+}
+.sh-selectbox-container-selected {
+  @include sh-selectbox-container;
+  .option-container {
+    background-color: $field-02;
+    .select-text {
+      @include font-headline-S;
+      color: $text-02;
+    }
+  }
+}

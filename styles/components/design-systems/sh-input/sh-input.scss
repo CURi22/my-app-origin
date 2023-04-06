@@ -1,0 +1,718 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+@mixin sh-input-container-text-field {
+  .label-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    .label {
+      @include font-label-M;
+      flex: 1;
+    }
+    .counter {
+      @include font-body-XS;
+    }
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    .input {
+      @include font-body-L;
+      flex: 1;
+    }
+    .icon-container {
+      display: flex;
+      .x-btn {
+        margin-left: 10px;
+      }
+      .eye-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+  .helper-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin-top: 3px;
+    .helper {
+      @include font-label-M;
+    }
+  }
+}
+.sh-input-container-text-field-disabled {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-field-enabled {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-field-enabled2 {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-field-error {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px $danger-01;
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $danger-01;
+    }
+  }
+}
+.sh-input-container-text-field-focused {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #42be65;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $text-03;
+    }
+  }
+}
+@mixin sh-input-container-text-area {
+  .label-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin: 0 5px;
+    .label {
+      @include font-label-M;
+      flex: 1;
+    }
+    .counter {
+      @include font-body-XS;
+    }
+  }
+  .input-container {
+    display: flex;
+    height: 44px;
+    border-radius: 10px;
+    .input {
+      @include font-body-M;
+      flex: 1;
+      margin: 11px;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+  .helper-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin-top: 3px;
+    .helper {
+      @include font-label-M;
+    }
+  }
+}
+.sh-input-container-text-area-line-disabled {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-line-enabled {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-line-enabled2 {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-input-container-text-area-line-error {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $inverse-support-01;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $inverse-support-01 inset;
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $inverse-support-01;
+    }
+  }
+}
+.sh-input-container-text-area-line-focused {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $interactive-04;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $interactive-04 inset;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: transparent;
+    }
+  }
+}
+.sh-input-container-text-area-fill-disabled {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-fill-enabled {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-fill-enabled2 {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: $field-02;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-input-container-text-area-fill-error {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $inverse-support-01;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: #f5eef0;
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $inverse-support-01;
+    }
+  }
+}
+.sh-input-container-text-area-fill-focused {
+  @include sh-input-container-text-area;
+  .label-container {
+    .label {
+      color: $interactive-04;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    background-color: #edf1f5;
+    box-shadow: 0 0 0 1px $ui-02 inset;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: transparent;
+    }
+  }
+}
+@mixin sh-input-container-text-area-2 {
+  border-radius: 10px;
+  .label-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin: 5px 11px 0 11px;
+    .label {
+      @include font-label-M;
+      flex: 1;
+    }
+    .counter {
+      @include font-body-XS;
+    }
+  }
+  .input-container {
+    display: flex;
+    .input {
+      @include font-body-M;
+      flex: 1;
+      margin: 0 11px;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+  .helper-container {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin: 0 11px 5px 11px;
+    .helper {
+      @include font-label-M;
+    }
+  }
+}
+.sh-input-container-text-area-2-line-disabled {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-2-line-enabled {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-2-line-enabled2 {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-input-container-text-area-2-line-error {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $inverse-support-01 inset;
+  .label-container {
+    .label {
+      color: $inverse-support-01;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $inverse-support-01;
+    }
+  }
+}
+.sh-input-container-text-area-2-line-focused {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $interactive-04 inset;
+  .label-container {
+    .label {
+      color: $interactive-04;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: transparent;
+    }
+  }
+}
+.sh-input-container-text-area-2-fill-disabled {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-2-fill-enabled {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-text-area-2-fill-enabled2 {
+  @include sh-input-container-text-area-2;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-input-container-text-area-2-fill-error {
+  @include sh-input-container-text-area-2;
+  background-color: $field-04;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $inverse-support-01;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $inverse-support-01;
+    }
+  }
+}
+.sh-input-container-text-area-2-fill-focused {
+  @include sh-input-container-text-area-2;
+  background-color: $field-03;
+  box-shadow: 0 0 0 1px $ui-02 inset;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+    .counter {
+      color: #9ba0a9;
+    }
+  }
+  .input-container {
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: transparent;
+    }
+  }
+}
+@mixin sh-input-container-password {
+  @include sh-input-container-text-field;
+  .label-container {
+    .label {
+      .label-wild {
+        margin-left: 5px;
+        color: $inverse-support-01;
+      }
+    }
+  }
+}
+.sh-input-container-password-input-disabled {
+  @include sh-input-container-password;
+  .label-container {
+    .label {
+      color: $text-03;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input {
+      color: $text-03;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-password-input-enabled {
+  @include sh-input-container-password;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}
+.sh-input-container-password-input-enabled2 {
+  @include sh-input-container-password;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px #8f8f8f;
+    .input {
+      color: $text-01;
+    }
+  }
+}
+.sh-input-container-password-input-error {
+  @include sh-input-container-password;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px $danger-01;
+    .input {
+      color: $text-01;
+    }
+  }
+  .helper-container {
+    .helper {
+      color: $danger-01;
+    }
+  }
+}
+.sh-input-container-password-input-focused {
+  @include sh-input-container-password;
+  .label-container {
+    .label {
+      color: $text-02;
+    }
+  }
+  .input-container {
+    box-shadow: 0 1px $inverse-support-02;
+    .input {
+      color: $text-01;
+    }
+    .input::placeholder {
+      color: $text-03;
+    }
+  }
+}

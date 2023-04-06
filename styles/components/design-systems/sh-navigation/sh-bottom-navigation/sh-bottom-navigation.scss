@@ -1,0 +1,62 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+.sh-bottom-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 375px;
+  height: 80px;
+  border-top: 1px solid $ui-02;
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70.75px;
+    height: 48px;
+    margin: 10px 10px 22px 10px;
+    .title-disabled {
+      @include font-label-S;
+      color: $disabled-02;
+    }
+    .title {
+      @include font-label-S;
+      color: $icon-02;
+    }
+    .title-bold {
+      @include font-button-S;
+      color: $icon-01;
+    }
+    .menu-5-icon-container {
+      position: relative;
+      .menu-5-dot {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 5px;
+        background-color: $inverse-support-01;
+        border-radius: 5px;
+      }
+      .menu-5-num {
+        position: absolute;
+        top: -3px;
+        right: -5px;
+        width: 12px;
+        height: 12px;
+        background-color: $inverse-support-01;
+        border-radius: 12px;
+        .num {
+          position: inherit;
+          top: 1px;
+          right: 3px;
+          font-size: 10px;
+          color: $icon-03;
+        }
+      }
+    }
+  }
+}

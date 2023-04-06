@@ -1,0 +1,46 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+@mixin tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin sh-tab-bar-container {
+  display: flex;
+  height: 44px;
+  .tab {
+    @include tab;
+    .text {
+      @include font-body-M;
+      color: $text-02;
+    }
+  }
+  .tab-on {
+    @include tab;
+    box-shadow: 0 -2px $interactive-04 inset;
+    .text {
+      @include font-headline-S;
+      color: $interactive-04;
+    }
+  }
+}
+.sh-tab-bar-container {
+  @include sh-tab-bar-container;
+  padding: 0 12px;
+  .tab {
+    margin: 0 19.5px;
+  }
+  .tab-on {
+    margin: 0 19.5px;
+  }
+}
+.sh-tab-bar-container-fill {
+  @include sh-tab-bar-container;
+  .tab {
+    flex: 1;
+  }
+  .tab-on {
+    flex: 1;
+  }
+}

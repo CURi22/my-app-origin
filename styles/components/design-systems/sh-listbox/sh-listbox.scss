@@ -1,0 +1,86 @@
+@import "/styles/design-systems/color-system.scss";
+@import "/styles/design-systems/typography.scss";
+
+@mixin sh-listbox-container {
+  display: flex;
+  padding: 0 24px 0 16px;
+  .left-img {
+    margin-right: 16px;
+  }
+  .text-container {
+    flex: 1;
+  }
+  .right-container {
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 63px;
+      height: 29px;
+      margin-left: 16px;
+      background-color: $pressed-02;
+      border-radius: 10px;
+      .text {
+        @include font-button-S;
+        color: $text-04;
+      }
+    }
+    .img {
+      margin-left: 16px;
+    }
+  }
+}
+.sh-listbox-container-1 {
+  @include sh-listbox-container;
+  align-items: center;
+  height: 56px;
+  .text-container {
+    .title {
+      @include font-body-M;
+      color: #1d1b20;
+    }
+  }
+}
+@mixin multiline-text-container {
+  .title {
+    @include font-headline-S;
+    color: #1d1b20;
+  }
+  .subtitle {
+    @include font-body-XS;
+    margin-top: -5px;
+    color: #49454f;
+  }
+}
+.sh-listbox-container-2 {
+  @include sh-listbox-container;
+  align-items: center;
+  height: 72px;
+  .text-container {
+    @include multiline-text-container;
+    height: 56px;
+    overflow: hidden;
+    .title {
+      margin-top: 5px;
+    }
+    .subtitle {
+      white-space: nowrap;
+    }
+  }
+}
+.sh-listbox-container-3 {
+  @include sh-listbox-container;
+  height: 92px;
+  .left-img {
+    margin-top: 12px;
+  }
+  .text-container {
+    @include multiline-text-container;
+    height: 68px;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+  .right-container {
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,120 @@
+@mixin font-display-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-display-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1.375em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-display-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-headline-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-headline-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-headline-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.875em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-subhead-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.813em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-subhead-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-subhead-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.625em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-body-XL {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1.125em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-body-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-body-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.875em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-body-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.813em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-body-XS {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+}
+@mixin font-button-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.938em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-button-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-button-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.625em;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+@mixin font-label-L {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.875em;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+}
+@mixin font-label-M {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+}
+@mixin font-label-S {
+  font-family: "Spoqa Han Sans Neo";
+  font-size: 0.625em;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+}
