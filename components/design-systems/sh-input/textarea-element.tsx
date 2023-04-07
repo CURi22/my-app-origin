@@ -12,20 +12,20 @@ interface TextareaElementParams {
     onChangeInput?(e: ChangeEvent<HTMLTextAreaElement>): void;
   };
   disabled: boolean;
-  onFocusInput({ val }: { val: boolean }): void;
+  onFocusInput(val: boolean): void;
 }
 
-export function TextareaElement({
+export default function TextareaElement({
   input,
   disabled,
   onFocusInput,
 }: TextareaElementParams) {
   function focusDetector() {
-    onFocusInput({ val: true });
+    onFocusInput(true);
   }
 
   function blurDetector() {
-    onFocusInput({ val: false });
+    onFocusInput(false);
   }
 
   return disabled ? (

@@ -9,10 +9,14 @@ import "styles/components/design-systems/sh-tab/sh-tab-box/sh-tab-box.scss";
 interface SHTabBoxParams {
   defaultIdx?: number;
   tabs: string[];
-  onClick({ idx }: { idx: number }): void;
+  onClick(idx: number): void;
 }
 
-export function SHTabBox({ defaultIdx, tabs, onClick }: SHTabBoxParams) {
+export default function SHTabBox({
+  defaultIdx,
+  tabs,
+  onClick,
+}: SHTabBoxParams) {
   const [tabIdx, setTabIdx] = useState<number>(defaultIdx ?? 0);
   const [isTabClickable, setIsTabClickable] = useState<boolean>(true);
 
@@ -26,10 +30,10 @@ export function SHTabBox({ defaultIdx, tabs, onClick }: SHTabBoxParams) {
     });
   }
 
-  function switchTab({ idx }: { idx: number }): void {
+  function switchTab(idx: number): void {
     setTabIdx(idx);
 
-    onClick({ idx });
+    onClick(idx);
   }
 
   return (
@@ -41,7 +45,7 @@ export function SHTabBox({ defaultIdx, tabs, onClick }: SHTabBoxParams) {
             <div
               className={idx === tabIdx ? "tab-on" : "tab"}
               onClick={() => {
-                isTabClickable && switchTab({ idx });
+                isTabClickable && switchTab(idx);
               }}
               tabIndex={idx}
             >

@@ -8,10 +8,10 @@ import "styles/components/design-systems/sh-tab/sh-tag-box/sh-tag-box.scss";
 
 interface SHTagBoxParams {
   tabs: string[];
-  onClick({ idx }: { idx: number }): void;
+  onClick(idx: number): void;
 }
 
-export function SHTagBox({ tabs, onClick }: SHTagBoxParams) {
+export default function SHTagBox({ tabs, onClick }: SHTagBoxParams) {
   const [isTabClickable, setIsTabClickable] = useState<boolean>(true);
 
   function disableClick(): void {
@@ -24,8 +24,8 @@ export function SHTagBox({ tabs, onClick }: SHTagBoxParams) {
     });
   }
 
-  function switchTab({ idx }: { idx: number }): void {
-    onClick({ idx });
+  function switchTab(idx: number): void {
+    onClick(idx);
   }
 
   return (
@@ -37,7 +37,7 @@ export function SHTagBox({ tabs, onClick }: SHTagBoxParams) {
             <div
               className="tab"
               onClick={() => {
-                isTabClickable && switchTab({ idx });
+                isTabClickable && switchTab(idx);
               }}
               tabIndex={idx}
             >

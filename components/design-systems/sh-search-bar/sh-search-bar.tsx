@@ -23,7 +23,7 @@ interface SHSearchBarParams {
   onKeyDownInput(): void;
 }
 
-export function SHSearchBar({
+export default function SHSearchBar({
   category,
   name,
   placeholder,

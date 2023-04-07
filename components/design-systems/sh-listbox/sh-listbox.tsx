@@ -23,7 +23,7 @@ interface SHListboxParams {
   onClick?(): void;
 }
 
-export function SHListbox({
+export default function SHListbox({
   leftContainer,
   lineType,
   rightContainer,

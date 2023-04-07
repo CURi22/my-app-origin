@@ -24,7 +24,7 @@ export default function KakaoButton() {
     });
   }
 
-  function scriptReadyHandler({ val }: { val: boolean }) {
+  function scriptReadyHandler(val: boolean) {
     setIsReady(val);
   }
 
@@ -32,7 +32,7 @@ export default function KakaoButton() {
     <>
       <Script
         onReady={() => {
-          scriptReadyHandler({ val: true });
+          scriptReadyHandler(true);
         }}
         src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
       />

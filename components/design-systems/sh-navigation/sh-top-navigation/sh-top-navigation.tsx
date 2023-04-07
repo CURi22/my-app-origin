@@ -30,15 +30,15 @@ interface SHTopNavigationParams {
   titleContainer?: TitleContainerElementParams;
 }
 
-export function SHTopNavigation({
+export default function SHTopNavigation({
   leftContainer,
   rightContainer,
   titleContainer,
 }: SHTopNavigationParams) {
-  function leftElement({ type, onClick }: LeftContainerParams): ReactElement {
+  function leftElement(param: LeftContainerParams): ReactElement {
     return (
-      <div className="left-btn" onClick={onClick} tabIndex={0}>
-        {type === "arrow" ? (
+      <div className="left-btn" onClick={param.onClick} tabIndex={0}>
+        {param.type === "arrow" ? (
           <Image
             className="icon"
             src={chevronLeft}
@@ -46,7 +46,7 @@ export function SHTopNavigation({
             height={32}
             alt="<"
           />
-        ) : type === "cancle" ? (
+        ) : param.type === "cancle" ? (
           <p className="text">취소</p>
         ) : (
           <></>
@@ -55,21 +55,18 @@ export function SHTopNavigation({
     );
   }
 
-  function titleElement({
-    position,
-    text,
-  }: TitleContainerElementParams): ReactElement {
+  function titleElement(param: TitleContainerElementParams): ReactElement {
     return (
-      <div className={`title-container-${position}`}>
-        <p className="text">{text}</p>
+      <div className={`title-container-${param.position}`}>
+        <p className="text">{param.text}</p>
       </div>
     );
   }
 
-  function rightElement({ type, onClick }: RightContainerParams): ReactElement {
+  function rightElement(param: RightContainerParams): ReactElement {
     return (
-      <div className="right-btn" onClick={onClick} tabIndex={1}>
-        {type === "arrow" ? (
+      <div className="right-btn" onClick={param.onClick} tabIndex={1}>
+        {param.type === "arrow" ? (
           <Image
             className="icon"
             src={chevronRight}
@@ -77,9 +74,9 @@ export function SHTopNavigation({
             height={32}
             alt=">"
           />
-        ) : type === "cancle" ? (
+        ) : param.type === "cancle" ? (
           <Image className="icon" src={xIcon} width={32} height={32} alt="X" />
-        ) : type === "confirm" ? (
+        ) : param.type === "confirm" ? (
           <p className="text">확인</p>
         ) : (
           <></>

@@ -14,7 +14,7 @@ interface SHButtonParams {
   onClick?(): void;
 }
 
-export function SHButton({ category, text, onClick }: SHButtonParams) {
+export default function SHButton({ category, text, onClick }: SHButtonParams) {
   return (
     <div
       className={`${category.shape}-${category.status}-${category.color}-${category.size}-${category.line}`}

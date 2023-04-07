@@ -8,7 +8,7 @@ import {
 } from "next/navigation";
 import { useEffect } from "react";
 
-import { fetchModule } from "utils/fetch/fetch-module";
+import { fetchModule, FetchOptionProps } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 
 export function GoogleRedirectClient() {
@@ -16,22 +16,21 @@ export function GoogleRedirectClient() {
   const searchParams: ReadonlyURLSearchParams | null = useSearchParams();
 
   useEffect(() => {
-    fetchModule({
-      uri: uriSource.session,
-      option: {
-        method: "POST",
-        body: {
-          server: {
-            id: 100,
-            token: "temp-token",
-          },
-          social: {
-            service: "google",
-            token: searchParams?.get("credential"),
-          },
+    const option: FetchOptionProps = {
+      method: "POST",
+      body: {
+        server: {
+          id: 100,
+          token: "temp-token",
+        },
+        social: {
+          service: "google",
+          token: searchParams?.get("credential"),
         },
       },
-    })
+    };
+
+    fetchModule(uriSource.session, option)
       .then((res: any) => {
         if (res.message === "done") {
           router.push("/home");

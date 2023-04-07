@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import { InputElement } from "./input-element";
-import { TextareaElement } from "./textarea-element";
+import InputElement from "./input-element";
+import TextareaElement from "./textarea-element";
 
 import xCircle from "public/icons/x-circle.svg";
 import eyeOn from "public/icons/eye-on.svg";
@@ -45,7 +45,7 @@ interface SHInputParams {
   onClickClear?(): void;
 }
 
-export function SHInput({
+export default function SHInput({
   category,
   counter,
   eyeIcon,
@@ -75,7 +75,7 @@ export function SHInput({
     );
   }, [status, isFocused, input.value]);
 
-  function focusDetector({ val }: { val: boolean }): void {
+  function focusDetector(val: boolean): void {
     setIsFocused(val);
   }
 

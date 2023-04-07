@@ -4,7 +4,7 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { fetchModule } from "utils/fetch/fetch-module";
+import { fetchModule, FetchOptionProps } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 
 export default function NaverRedirectClient() {
@@ -21,22 +21,21 @@ export default function NaverRedirectClient() {
 
     const naverToken: string = urlHash.slice(firstIndex, lastIndex);
 
-    fetchModule({
-      uri: uriSource.session,
-      option: {
-        method: "POST",
-        body: {
-          server: {
-            id: 102,
-            token: "temp-token",
-          },
-          social: {
-            service: "naver",
-            token: naverToken,
-          },
+    const option: FetchOptionProps = {
+      method: "POST",
+      body: {
+        server: {
+          id: 102,
+          token: "temp-token",
+        },
+        social: {
+          service: "naver",
+          token: naverToken,
         },
       },
-    })
+    };
+
+    fetchModule(uriSource.session, option)
       .then((res: any) => {
         if (res.message === "done") {
           router.push("/home");

@@ -8,16 +8,21 @@ interface SHTabBarParams {
   defaultIdx?: number;
   fill?: boolean;
   tabs: string[];
-  onClick({ idx }: { idx: number }): void;
+  onClick(idx: number): void;
 }
 
-export function SHTabBar({ defaultIdx, fill, tabs, onClick }: SHTabBarParams) {
+export default function SHTabBar({
+  defaultIdx,
+  fill,
+  tabs,
+  onClick,
+}: SHTabBarParams) {
   const [tabIdx, setTabIdx] = useState<number>(defaultIdx ?? 0);
 
-  function switchTab({ idx }: { idx: number }): void {
+  function switchTab(idx: number): void {
     setTabIdx(idx);
 
-    onClick({ idx });
+    onClick(idx);
   }
 
   return (
@@ -28,7 +33,7 @@ export function SHTabBar({ defaultIdx, fill, tabs, onClick }: SHTabBarParams) {
         <div
           className={idx === tabIdx ? "tab-on" : "tab"}
           onClick={() => {
-            switchTab({ idx });
+            switchTab(idx);
           }}
           tabIndex={idx}
           key={ele}

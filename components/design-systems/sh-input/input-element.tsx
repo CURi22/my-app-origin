@@ -14,21 +14,21 @@ interface InputElementParams {
   };
   isEyeOpen: boolean;
   disabled: boolean;
-  onFocusInput({ val }: { val: boolean }): void;
+  onFocusInput(val: boolean): void;
 }
 
-export function InputElement({
+export default function InputElement({
   input,
   isEyeOpen,
   disabled,
   onFocusInput,
 }: InputElementParams) {
   function focusDetector() {
-    onFocusInput({ val: true });
+    onFocusInput(true);
   }
 
   function blurDetector() {
-    onFocusInput({ val: false });
+    onFocusInput(false);
   }
 
   return disabled ? (

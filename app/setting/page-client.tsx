@@ -8,23 +8,18 @@ import { fetchModule } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 
 export function SettingClient() {
-  const router: AppRouterInstance = useRouter();
   const user: SWRResponse = useSWR(uriSource.session, (key: string) =>
-    fetchModule({
-      uri: key,
-      option: { method: "GET" },
-    })
+    fetchModule(key, { method: "GET" })
   );
 
   if (user.error) {
     console.log(user.error);
   }
 
+  const router: AppRouterInstance = useRouter();
+
   function deleteSession(): void {
-    fetchModule({
-      uri: uriSource.session,
-      option: { method: "DELETE" },
-    })
+    fetchModule(uriSource.session, { method: "DELETE" })
       .then((res: any) => {
         if (res.message === "done") {
           user.mutate();

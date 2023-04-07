@@ -31,7 +31,7 @@ export default function NaverButton() {
     }
   }, [isReady]);
 
-  function scriptReadyHandler({ val }: { val: boolean }) {
+  function scriptReadyHandler(val: boolean) {
     setIsReady(val);
   }
 
@@ -39,7 +39,7 @@ export default function NaverButton() {
     <>
       <Script
         onReady={() => {
-          scriptReadyHandler({ val: true });
+          scriptReadyHandler(true);
         }}
         src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
       />

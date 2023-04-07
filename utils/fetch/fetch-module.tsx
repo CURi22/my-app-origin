@@ -1,20 +1,15 @@
-interface OptionProps {
+export interface FetchOptionProps {
   method: "GET" | "POST" | "PUT" | "DELETE";
   cache?: "force-cache" | "no-store";
   headers?: HeadersInit;
   body?: any;
 }
 
-export interface FetchModuleParams {
-  uri: string;
-  option: OptionProps;
-}
-
-export async function fetchModule({
-  uri,
-  option,
-}: FetchModuleParams): Promise<any> {
-  const defaultOption: OptionProps = {
+export async function fetchModule(
+  uri: string,
+  option: FetchOptionProps
+): Promise<any> {
+  const defaultOption: FetchOptionProps = {
     method: option.method,
     cache: option.cache,
     headers: option.headers ?? { "Content-Type": "application/json" },

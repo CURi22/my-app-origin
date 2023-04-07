@@ -20,41 +20,36 @@ declare module "iron-session" {
   }
 }
 
-interface NextAPIHandlerParams {
-  requst: NextApiRequest;
-  response: NextApiResponse;
-}
-
-async function nextAPIHandler({
-  requst,
-  response,
-}: NextAPIHandlerParams): Promise<void> {
-  switch (requst.method) {
+async function nextAPIHandler(
+  req: NextApiRequest,
+  res: NextApiResponse
+): Promise<void> {
+  switch (req.method) {
     case "GET":
-      const user: IronSessionUser | undefined = requst.session.user;
+      const user: IronSessionUser | undefined = req.session.user;
 
-      response.send({ user });
+      res.send({ user });
 
       break;
 
     case "POST":
-      requst.session.user = requst.body;
+      req.session.user = req.body;
 
-      await requst.session.save();
+      await req.session.save();
 
-      response.send({ message: "done" });
+      res.send({ message: "done" });
 
       break;
 
     case "DELETE":
-      requst.session.destroy();
+      req.session.destroy();
 
-      response.send({ message: "done" });
+      res.send({ message: "done" });
 
       break;
 
     default:
-      response.status(400);
+      res.status(400);
   }
 }
 
@@ -66,12 +61,4 @@ const ironSessionOption: IronSessionOptions = {
     process.env.IRON_COOKIE_PASSWORD ?? "2YP7n3qbCje3Msgav3sV12HZHi4JdDAV",
 };
 
-export default withIronSessionApiRoute(
-  (req: NextApiRequest, res: NextApiResponse) => {
-    nextAPIHandler({
-      requst: req,
-      response: res,
-    });
-  },
-  ironSessionOption
-);
+export default withIronSessionApiRoute(nextAPIHandler, ironSessionOption);

@@ -12,21 +12,23 @@ declare global {
 }
 
 interface GoogleAccountCallbackParams {
-  response: {
-    clientId: string;
-    client_id: string;
-    credential: string;
-    select_by: string;
-  };
+  clientId: string;
+  client_id: string;
+  credential: string;
+  select_by: string;
 }
 
 export default function GoogleButton() {
   const [isReady, setIsReady] = useState<boolean>();
+
+  const btnRef: MutableRefObject<any> = useRef(null);
+
   const router: AppRouterInstance = useRouter();
-  const btnRef: MutableRefObject<any> = useRef();
 
   useEffect(() => {
-    function googleAuthorize({ callback }: { callback(res: any): void }): void {
+    function googleAuthorize(
+      callback: (res: GoogleAccountCallbackParams) => void
+    ): void {
       const google: any = window.google;
 
       google.accounts.id.initialize({
@@ -35,13 +37,11 @@ export default function GoogleButton() {
       });
     }
 
-    function googleAccountCallback({
-      response,
-    }: GoogleAccountCallbackParams): void {
-      router.replace(`/oauth2/google?credential=${response.credential}`);
+    function googleAccountCallback(res: GoogleAccountCallbackParams): void {
+      router.replace(`/oauth2/google?credential=${res.credential}`);
     }
 
-    function renderLoginButton({ ref }: { ref: MutableRefObject<any> }): void {
+    function renderLoginButton(ref: MutableRefObject<any>): void {
       const google: any = window.google;
 
       google.accounts.id.renderButton(ref.current, {
@@ -53,17 +53,13 @@ export default function GoogleButton() {
     }
 
     if (isReady) {
-      googleAuthorize({
-        callback: (res: any) => {
-          googleAccountCallback({ response: res });
-        },
-      });
+      googleAuthorize(googleAccountCallback);
 
-      renderLoginButton({ ref: btnRef });
+      renderLoginButton(btnRef);
     }
   }, [isReady, router, btnRef]);
 
-  function scriptReadyHandler({ val }: { val: boolean }) {
+  function scriptReadyHandler(val: boolean) {
     setIsReady(val);
   }
 
@@ -71,7 +67,7 @@ export default function GoogleButton() {
     <>
       <Script
         onReady={() => {
-          scriptReadyHandler({ val: true });
+          scriptReadyHandler(true);
         }}
         src="https://accounts.google.com/gsi/client"
       />

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import { SelectboxList } from "./selectbox-list";
+import SelectboxList from "./selectbox-list";
 
 import arrowDown from "public/icons/arrow-down-fill.svg";
 import arrowUp from "public/icons/arrow-up-fill.svg";
@@ -15,10 +15,10 @@ interface SHSelectboxParams {
   options: string[];
   value?: string;
   width?: number;
-  onFocusList({ val }: { val: string }): void;
+  onFocusList(val: string): void;
 }
 
-export function SHSelectbox({
+export default function SHSelectbox({
   helper,
   options,
   value,

@@ -13,8 +13,8 @@ export default function EmailClient() {
     pw: "",
   });
 
-  function onChange({ event }: { event: ChangeEvent<HTMLInputElement> }): void {
-    const { name, value }: EventTarget & HTMLInputElement = event.target;
+  function onChange(e: ChangeEvent<HTMLInputElement> ): void {
+    const { name, value }: EventTarget & HTMLInputElement = e.target;
 
     setInputValue({ ...inputValue, [name]: value });
   }
@@ -26,18 +26,14 @@ export default function EmailClient() {
         name="email"
         type="email"
         value={inputValue.em}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          onChange({ event: e });
-        }}
+        onChange={onChange}
       />
       <label>비밀번호</label>
       <input
         name="password"
         type="password"
         value={inputValue.pw}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          onChange({ event: e });
-        }}
+        onChange={onChange}
       />
       <p>확인</p>
       <p>가입</p>

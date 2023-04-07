@@ -23,7 +23,7 @@ interface MenuAttrProps {
   onClick(): void;
 }
 
-export function SHBottomNavigation({
+export default function SHBottomNavigation({
   activated,
   disabled,
   expanded,

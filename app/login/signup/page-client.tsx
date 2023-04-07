@@ -11,10 +11,7 @@ export default function SignupClient() {
   const [pageNum, setPageNum] = useState<number>(0);
 
   useEffect(() => {
-    fetchModule({
-      uri: uriSource.session,
-      option: { method: "GET" },
-    })
+    fetchModule(uriSource.session, { method: "GET" })
       .then((res: { user: IronSessionUser }) => {
         setTerms(
           0 < Object.keys(res).length && "server" in res.user

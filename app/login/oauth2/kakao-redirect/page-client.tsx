@@ -8,7 +8,7 @@ import {
 } from "next/navigation";
 import { useEffect } from "react";
 
-import { fetchModule } from "utils/fetch/fetch-module";
+import { fetchModule, FetchOptionProps } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 
 export function KakaoRedirectClient() {
@@ -16,22 +16,21 @@ export function KakaoRedirectClient() {
   const searchParams: ReadonlyURLSearchParams | null = useSearchParams();
 
   useEffect(() => {
-    fetchModule({
-      uri: uriSource.session,
-      option: {
-        method: "POST",
-        body: {
-          server: {
-            id: 101,
-            token: "temp-token",
-          },
-          social: {
-            service: "kakao",
-            token: searchParams?.get("code"),
-          },
+    const option: FetchOptionProps = {
+      method: "POST",
+      body: {
+        server: {
+          id: 101,
+          token: "temp-token",
+        },
+        social: {
+          service: "kakao",
+          token: searchParams?.get("code"),
         },
       },
-    })
+    };
+
+    fetchModule(uriSource.session, option)
       .then((res: any) => {
         if (res.message === "done") {
           router.push("/home");
