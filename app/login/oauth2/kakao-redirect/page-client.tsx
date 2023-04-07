@@ -31,8 +31,8 @@ export function KakaoRedirectClient() {
     };
 
     fetchModule(uriSource.session, option)
-      .then((res: any) => {
-        if (res.message === "done") {
+      .then((res: Response) => {
+        if (res.status === 200) {
           router.push("/home");
         }
       })

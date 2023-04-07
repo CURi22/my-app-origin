@@ -9,7 +9,7 @@ import { uriSource } from "utils/uri-source";
 
 export function SettingClient() {
   const user: SWRResponse = useSWR(uriSource.session, (key: string) =>
-    fetchModule(key, { method: "GET" })
+    fetchModule(key, { method: "GET" }).then((res: Response) => res.json())
   );
 
   if (user.error) {
@@ -20,8 +20,8 @@ export function SettingClient() {
 
   function deleteSession(): void {
     fetchModule(uriSource.session, { method: "DELETE" })
-      .then((res: any) => {
-        if (res.message === "done") {
+      .then((res: Response) => {
+        if (res.status === 200) {
           user.mutate();
         }
       })
@@ -42,12 +42,12 @@ export function SettingClient() {
     <>
       <p>현재 로그인 상태</p>
       <p>{JSON.stringify(user.data)}</p>
-      {user.data?.user?.server !== undefined && (
+      {user.data.server !== undefined && (
         <>
-          <button onClick={deleteSession}>세션만 삭제</button>
+          <div onClick={deleteSession}>세션만 삭제</div>
           <div />
-          {user.data.user.social?.service === "kakao" && (
-            <button onClick={withSocial}>카카오도 같이 로그아웃</button>
+          {user.data.social.service === "kakao" && (
+            <div onClick={withSocial}>카카오도 같이 로그아웃</div>
           )}
         </>
       )}

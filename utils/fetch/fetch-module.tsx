@@ -16,5 +16,5 @@ export async function fetchModule(
     body: JSON.stringify(option.body),
   };
 
-  return await fetch(uri, defaultOption).then((res: any) => res.json());
+  return await fetch(uri, defaultOption);
 }

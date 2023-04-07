@@ -12,12 +12,9 @@ export default function SignupClient() {
 
   useEffect(() => {
     fetchModule(uriSource.session, { method: "GET" })
-      .then((res: { user: IronSessionUser }) => {
-        setTerms(
-          0 < Object.keys(res).length && "server" in res.user
-            ? "simple"
-            : "complex"
-        );
+      .then((res: Response) => res.json())
+      .then((res: IronSessionUser) => {
+        setTerms("server" in res ? "simple" : "complex");
       })
       .catch((e: any) => {
         console.log(e);

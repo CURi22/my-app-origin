@@ -28,7 +28,7 @@ async function nextAPIHandler(
     case "GET":
       const user: IronSessionUser | undefined = req.session.user;
 
-      res.send({ user });
+      res.send(user ?? {});
 
       break;
 
@@ -37,19 +37,22 @@ async function nextAPIHandler(
 
       await req.session.save();
 
-      res.send({ message: "done" });
+      res.status(200);
+      res.send({});
 
       break;
 
     case "DELETE":
       req.session.destroy();
 
-      res.send({ message: "done" });
+      res.status(200);
+      res.send({});
 
       break;
 
     default:
       res.status(400);
+      res.send({});
   }
 }
 

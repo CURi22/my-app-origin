@@ -7,9 +7,11 @@ export default function KakaoLogout() {
 
   fetch(
     `https://kauth.kakao.com/oauth/logout?client_id=${kakaoRAPI}&logout_redirect_uri=${clientURI}/setting`
-  ).catch((e: any) => {
-    console.log(e);
-  });
+  )
+    // .then()
+    .catch((e: any) => {
+      console.log(e);
+    });
 
   redirect("/home");
 }
