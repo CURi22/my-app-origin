@@ -20,11 +20,11 @@ export default function SelectboxList({
   }
 
   return (
-    <div className="sh-selectbox-list-background" onClick={closeList}>
+    <div className="sh-selectbox-list-backg" onClick={closeList}>
       <div className="sh-selectbox-list-container">
         {options.map((ele: string, idx: number) => (
           <Fragment key={ele}>
-            {idx !== 0 && <div className="divider" />}
+            {idx !== 0 && <div className="div" />}
             <div
               className={idx === focusedElement ? "list-focused" : "list"}
               onClick={closeList}
@@ -34,7 +34,7 @@ export default function SelectboxList({
               }}
               tabIndex={idx}
             >
-              <p className="text">{ele}</p>
+              <p className="txt">{ele}</p>
             </div>
           </Fragment>
         ))}

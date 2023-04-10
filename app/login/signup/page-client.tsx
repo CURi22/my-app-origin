@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { IronSessionUser } from "pages/api/cookie/iron-session-user";
+import { IronSessionUserProps } from "pages/api/cookie/iron-session-user";
 import { fetchModule } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 
@@ -13,7 +13,7 @@ export default function SignupClient() {
   useEffect(() => {
     fetchModule(uriSource.session, { method: "GET" })
       .then((res: Response) => res.json())
-      .then((res: IronSessionUser) => {
+      .then((res: IronSessionUserProps) => {
         setTerms("server" in res ? "simple" : "complex");
       })
       .catch((e: any) => {

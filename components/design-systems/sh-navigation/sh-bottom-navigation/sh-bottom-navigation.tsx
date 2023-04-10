@@ -78,14 +78,14 @@ export default function SHBottomNavigation({
   ];
 
   return (
-    <div className="sh-bottom-navigation-container">
+    <div className="sh-bot-nav-container">
       {menuAttr.map((ele: MenuAttrProps, idx: number) =>
         disabled ? (
           idx === 2 ? (
             expanded ? (
               <div className="btn">
                 <Image
-                  className="expanded-icon"
+                  className="exp-ico"
                   src={ele.disabledIcon}
                   width={37}
                   height={37}
@@ -98,7 +98,7 @@ export default function SHBottomNavigation({
           ) : (
             <div className="btn" key={ele.title}>
               <Image
-                className="icon"
+                className="ico"
                 src={ele.disabledIcon}
                 width={20}
                 height={20}
@@ -111,7 +111,7 @@ export default function SHBottomNavigation({
           expanded ? (
             <div className="btn" onClick={ele.onClick} tabIndex={idx}>
               <Image
-                className="expanded-icon"
+                className="exp-ico"
                 src={ele.icon}
                 width={37}
                 height={37}
@@ -129,7 +129,7 @@ export default function SHBottomNavigation({
             key={ele.title}
           >
             <Image
-              className="icon"
+              className="ico"
               src={ele.boldIcon}
               width={20}
               height={20}
@@ -144,8 +144,19 @@ export default function SHBottomNavigation({
             tabIndex={idx}
             key={ele.title}
           >
+            {idx === 4 && (
+              <div className="menu-5-ico-container">
+                {dot === 0 ? (
+                  <div className="menu-5-dot" />
+                ) : (
+                  <div className="menu-5-num">
+                    <p className="num">{dot}</p>
+                  </div>
+                )}
+              </div>
+            )}
             <Image
-              className="icon"
+              className="ico"
               src={ele.icon}
               width={20}
               height={20}

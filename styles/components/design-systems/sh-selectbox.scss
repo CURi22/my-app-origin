@@ -1,7 +1,7 @@
 @import "/styles/design-systems/color-system.scss";
 @import "/styles/design-systems/typography.scss";
 
-.sh-selectbox-list-background {
+.sh-selectbox-list-backg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@
     border-radius: 10px;
     box-shadow: 0px 12px 39px rgba($color: #000, $alpha: 0.2);
     overflow: hidden;
-    .divider {
+    .div {
       height: 1px;
       background-color: rgba($color: #000, $alpha: 0.2);
     }
@@ -47,27 +47,27 @@
 }
 @mixin sh-selectbox-container {
   display: inline-block;
-  .option-container {
+  .opt-container {
     display: flex;
     align-items: center;
     width: 343px;
     height: 55px;
     border-radius: 10px;
-    .select-text {
+    .select-txt {
       flex: 1;
       padding: 0 12px;
       text-align: start;
     }
-    .icon {
+    .ico {
       padding: 0 12px;
     }
   }
 }
 .sh-selectbox-container-enabled {
   @include sh-selectbox-container;
-  .option-container {
+  .opt-container {
     background-color: $field-02;
-    .select-text {
+    .select-txt {
       @include font-label-L;
       color: $text-03;
     }
@@ -75,9 +75,9 @@
 }
 .sh-selectbox-container-error {
   @include sh-selectbox-container;
-  .option-container {
+  .opt-container {
     background-color: $field-04;
-    .select-text {
+    .select-txt {
       @include font-label-L;
       color: $text-03;
     }
@@ -90,9 +90,9 @@
 }
 .sh-selectbox-container-focused {
   @include sh-selectbox-container;
-  .option-container {
+  .opt-container {
     background-color: $field-03;
-    .select-text {
+    .select-txt {
       @include font-headline-S;
       color: $text-02;
     }
@@ -100,9 +100,9 @@
 }
 .sh-selectbox-container-selected {
   @include sh-selectbox-container;
-  .option-container {
+  .opt-container {
     background-color: $field-02;
-    .select-text {
+    .select-txt {
       @include font-headline-S;
       color: $text-02;
     }

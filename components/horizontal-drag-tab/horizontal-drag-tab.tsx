@@ -45,8 +45,8 @@ export function HorizontalDragTab({
 
   return (
     <div
-      className="horizontal-drag-tab-container"
       ref={containerRef}
+      className="horizontal-drag-tab-container"
       onMouseDown={enableDragging}
       onMouseMove={scrollWorks}
       onMouseLeave={disableDragging}

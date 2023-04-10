@@ -123,7 +123,7 @@ export default function SHInput({
           />
         )}
         {componentState !== "disabled" && 0 < input.value.length && (
-          <div className="icon-container">
+          <div className="ico-container">
             {onClickClear !== undefined && (
               <Image
                 className="x-btn"

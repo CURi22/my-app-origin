@@ -40,14 +40,14 @@ export default function SHTopNavigation({
       <div className="left-btn" onClick={param.onClick} tabIndex={0}>
         {param.type === "arrow" ? (
           <Image
-            className="icon"
+            className="ico"
             src={chevronLeft}
             width={32}
             height={32}
             alt="<"
           />
         ) : param.type === "cancle" ? (
-          <p className="text">취소</p>
+          <p className="txt">취소</p>
         ) : (
           <></>
         )}
@@ -58,7 +58,7 @@ export default function SHTopNavigation({
   function titleElement(param: TitleContainerElementParams): ReactElement {
     return (
       <div className={`title-container-${param.position}`}>
-        <p className="text">{param.text}</p>
+        <p className="txt">{param.text}</p>
       </div>
     );
   }
@@ -68,16 +68,16 @@ export default function SHTopNavigation({
       <div className="right-btn" onClick={param.onClick} tabIndex={1}>
         {param.type === "arrow" ? (
           <Image
-            className="icon"
+            className="ico"
             src={chevronRight}
             width={32}
             height={32}
             alt=">"
           />
         ) : param.type === "cancle" ? (
-          <Image className="icon" src={xIcon} width={32} height={32} alt="X" />
+          <Image className="ico" src={xIcon} width={32} height={32} alt="X" />
         ) : param.type === "confirm" ? (
-          <p className="text">확인</p>
+          <p className="txt">확인</p>
         ) : (
           <></>
         )}
@@ -86,7 +86,7 @@ export default function SHTopNavigation({
   }
 
   return (
-    <div className="sh-top-navigation-container">
+    <div className="sh-top-nav-container">
       {leftContainer !== undefined && leftElement(leftContainer)}
       {titleContainer !== undefined && (
         <>

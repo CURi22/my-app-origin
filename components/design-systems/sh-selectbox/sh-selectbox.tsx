@@ -61,12 +61,12 @@ export default function SHSelectbox({
       )}
       <div className={`sh-selectbox-container-${selectState}`}>
         <div
-          className="option-container"
+          className="opt-container"
           onClick={openList}
           tabIndex={0}
           style={{ width }}
         >
-          <p className="select-text">{value ?? options[0]}</p>
+          <p className="select-txt">{value ?? options[0]}</p>
           {selectState === "focused" ? (
             <Image
               className="icon"
@@ -77,7 +77,7 @@ export default function SHSelectbox({
             />
           ) : (
             <Image
-              className="icon"
+              className="ico"
               src={arrowDown}
               width={16}
               height={16}

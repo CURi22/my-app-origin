@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: center;
 }
-@mixin radius-circle {
+@mixin radius-sh-circle {
   border-radius: 100px;
 }
-@mixin radius-round {
+@mixin radius-sh-round {
   border-radius: 10px;
 }
 @mixin size-large {
@@ -24,7 +24,7 @@
   width: 84px;
   height: 34px;
 }
-.square-enabled-primary-large-fill {
+.sh-square-enabled-primary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $interactive-01;
@@ -33,7 +33,7 @@
     color: $text-04;
   }
 }
-.square-enabled-primary-regular-fill {
+.sh-square-enabled-primary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $interactive-01;
@@ -42,7 +42,7 @@
     color: $text-04;
   }
 }
-.square-enabled-primary-small-fill {
+.sh-square-enabled-primary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $interactive-01;
@@ -51,7 +51,7 @@
     color: $text-04;
   }
 }
-.square-pressed-primary-large-fill {
+.sh-square-pressed-primary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $pressed-02;
@@ -60,7 +60,7 @@
     color: $text-04;
   }
 }
-.square-pressed-primary-regular-fill {
+.sh-square-pressed-primary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $pressed-02;
@@ -69,7 +69,7 @@
     color: $text-04;
   }
 }
-.square-pressed-primary-small-fill {
+.sh-square-pressed-primary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $pressed-02;
@@ -78,7 +78,7 @@
     color: $text-04;
   }
 }
-.square-disabled-primary-large-fill {
+.sh-square-disabled-primary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $disabled-01;
@@ -87,7 +87,7 @@
     color: $text-03;
   }
 }
-.square-disabled-primary-regular-fill {
+.sh-square-disabled-primary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $disabled-01;
@@ -96,7 +96,7 @@
     color: $text-03;
   }
 }
-.square-disabled-primary-small-fill {
+.sh-square-disabled-primary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $disabled-01;
@@ -105,99 +105,9 @@
     color: $text-03;
   }
 }
-.round-enabled-primary-large-fill {
+.sh-round-enabled-primary-large-fill {
   @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $interactive-01;
-  .text {
-    @include font-button-L;
-    color: $text-04;
-  }
-}
-.round-enabled-primary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $interactive-01;
-  .text {
-    @include font-button-M;
-    color: $text-04;
-  }
-}
-.round-enabled-primary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $interactive-01;
-  .text {
-    @include font-button-S;
-    color: $text-04;
-  }
-}
-.round-pressed-primary-large-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $pressed-02;
-  .text {
-    @include font-button-L;
-    color: $text-04;
-  }
-}
-.round-pressed-primary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $pressed-02;
-  .text {
-    @include font-button-M;
-    color: $text-04;
-  }
-}
-.round-pressed-primary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $pressed-02;
-  .text {
-    @include font-button-S;
-    color: $text-04;
-  }
-}
-.round-disabled-primary-large-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $disabled-01;
-  .text {
-    @include font-button-L;
-    color: $text-03;
-  }
-}
-.round-disabled-primary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $disabled-01;
-  .text {
-    @include font-button-M;
-    color: $text-03;
-  }
-}
-.round-disabled-primary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $disabled-01;
-  .text {
-    @include font-button-S;
-    color: $text-03;
-  }
-}
-.circle-enabled-primary-large-fill {
-  @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $interactive-01;
   .text {
@@ -205,9 +115,9 @@
     color: $text-04;
   }
 }
-.circle-enabled-primary-regular-fill {
+.sh-round-enabled-primary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $interactive-01;
   .text {
@@ -215,9 +125,9 @@
     color: $text-04;
   }
 }
-.circle-enabled-primary-small-fill {
+.sh-round-enabled-primary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $interactive-01;
   .text {
@@ -225,9 +135,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-primary-large-fill {
+.sh-round-pressed-primary-large-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $pressed-02;
   .text {
@@ -235,9 +145,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-primary-regular-fill {
+.sh-round-pressed-primary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $pressed-02;
   .text {
@@ -245,9 +155,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-primary-small-fill {
+.sh-round-pressed-primary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $pressed-02;
   .text {
@@ -255,9 +165,9 @@
     color: $text-04;
   }
 }
-.circle-disabled-primary-large-fill {
+.sh-round-disabled-primary-large-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $disabled-01;
   .text {
@@ -265,9 +175,9 @@
     color: $text-03;
   }
 }
-.circle-disabled-primary-regular-fill {
+.sh-round-disabled-primary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $disabled-01;
   .text {
@@ -275,9 +185,9 @@
     color: $text-03;
   }
 }
-.circle-disabled-primary-small-fill {
+.sh-round-disabled-primary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $disabled-01;
   .text {
@@ -285,7 +195,97 @@
     color: $text-03;
   }
 }
-.square-enabled-primary-large-line {
+.sh-circle-enabled-primary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $interactive-01;
+  .text {
+    @include font-button-L;
+    color: $text-04;
+  }
+}
+.sh-circle-enabled-primary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $interactive-01;
+  .text {
+    @include font-button-M;
+    color: $text-04;
+  }
+}
+.sh-circle-enabled-primary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $interactive-01;
+  .text {
+    @include font-button-S;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-primary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $pressed-02;
+  .text {
+    @include font-button-L;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-primary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $pressed-02;
+  .text {
+    @include font-button-M;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-primary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $pressed-02;
+  .text {
+    @include font-button-S;
+    color: $text-04;
+  }
+}
+.sh-circle-disabled-primary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $disabled-01;
+  .text {
+    @include font-button-L;
+    color: $text-03;
+  }
+}
+.sh-circle-disabled-primary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $disabled-01;
+  .text {
+    @include font-button-M;
+    color: $text-03;
+  }
+}
+.sh-circle-disabled-primary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $disabled-01;
+  .text {
+    @include font-button-S;
+    color: $text-03;
+  }
+}
+.sh-square-enabled-primary-large-line {
   @include default-attr;
   @include size-large;
   background-color: $interactive-03;
@@ -295,7 +295,7 @@
     color: $ui-04;
   }
 }
-.square-enabled-primary-regular-line {
+.sh-square-enabled-primary-regular-line {
   @include default-attr;
   @include size-regular;
   background-color: $interactive-03;
@@ -305,7 +305,7 @@
     color: $ui-04;
   }
 }
-.square-enabled-primary-small-line {
+.sh-square-enabled-primary-small-line {
   @include default-attr;
   @include size-small;
   background-color: $interactive-03;
@@ -315,7 +315,7 @@
     color: $ui-04;
   }
 }
-.square-pressed-primary-large-line {
+.sh-square-pressed-primary-large-line {
   @include default-attr;
   @include size-large;
   background-color: $pressed-01;
@@ -325,7 +325,7 @@
     color: $ui-05;
   }
 }
-.square-pressed-primary-regular-line {
+.sh-square-pressed-primary-regular-line {
   @include default-attr;
   @include size-regular;
   background-color: $pressed-01;
@@ -335,7 +335,7 @@
     color: $ui-05;
   }
 }
-.square-pressed-primary-small-line {
+.sh-square-pressed-primary-small-line {
   @include default-attr;
   @include size-small;
   background-color: $pressed-01;
@@ -345,7 +345,7 @@
     color: $ui-05;
   }
 }
-.square-disabled-primary-large-line {
+.sh-square-disabled-primary-large-line {
   @include default-attr;
   @include size-large;
   background-color: $disabled-02;
@@ -355,7 +355,7 @@
     color: $disabled-02;
   }
 }
-.square-disabled-primary-regular-line {
+.sh-square-disabled-primary-regular-line {
   @include default-attr;
   @include size-regular;
   background-color: $disabled-02;
@@ -365,7 +365,7 @@
     color: $disabled-02;
   }
 }
-.square-disabled-primary-small-line {
+.sh-square-disabled-primary-small-line {
   @include default-attr;
   @include size-small;
   background-color: $disabled-02;
@@ -375,9 +375,9 @@
     color: $disabled-02;
   }
 }
-.round-enabled-primary-large-line {
+.sh-round-enabled-primary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -386,9 +386,9 @@
     color: $ui-04;
   }
 }
-.round-enabled-primary-regular-line {
+.sh-round-enabled-primary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -397,9 +397,9 @@
     color: $ui-04;
   }
 }
-.round-enabled-primary-small-line {
+.sh-round-enabled-primary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -408,9 +408,9 @@
     color: $ui-04;
   }
 }
-.round-pressed-primary-large-line {
+.sh-round-pressed-primary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -419,9 +419,9 @@
     color: $ui-05;
   }
 }
-.round-pressed-primary-regular-line {
+.sh-round-pressed-primary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -430,9 +430,9 @@
     color: $ui-05;
   }
 }
-.round-pressed-primary-small-line {
+.sh-round-pressed-primary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -441,9 +441,9 @@
     color: $ui-05;
   }
 }
-.round-disabled-primary-large-line {
+.sh-round-disabled-primary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -451,9 +451,9 @@
     color: $disabled-02;
   }
 }
-.round-disabled-primary-regular-line {
+.sh-round-disabled-primary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -461,9 +461,9 @@
     color: $disabled-02;
   }
 }
-.round-disabled-primary-small-line {
+.sh-round-disabled-primary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -471,9 +471,9 @@
     color: $disabled-02;
   }
 }
-.circle-enabled-primary-large-line {
+.sh-circle-enabled-primary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -482,9 +482,9 @@
     color: $ui-04;
   }
 }
-.circle-enabled-primary-regular-line {
+.sh-circle-enabled-primary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -493,9 +493,9 @@
     color: $ui-04;
   }
 }
-.circle-enabled-primary-small-line {
+.sh-circle-enabled-primary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $interactive-03;
   box-shadow: 0 0 0 1px $ui-04 inset;
@@ -504,9 +504,9 @@
     color: $ui-04;
   }
 }
-.circle-pressed-primary-large-line {
+.sh-circle-pressed-primary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -515,9 +515,9 @@
     color: $ui-05;
   }
 }
-.circle-pressed-primary-regular-line {
+.sh-circle-pressed-primary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -526,9 +526,9 @@
     color: $ui-05;
   }
 }
-.circle-pressed-primary-small-line {
+.sh-circle-pressed-primary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $pressed-01;
   box-shadow: 0 0 0 1px $ui-05 inset;
@@ -537,9 +537,9 @@
     color: $ui-05;
   }
 }
-.circle-disabled-primary-large-line {
+.sh-circle-disabled-primary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -547,9 +547,9 @@
     color: $disabled-02;
   }
 }
-.circle-disabled-primary-regular-line {
+.sh-circle-disabled-primary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -557,9 +557,9 @@
     color: $disabled-02;
   }
 }
-.circle-disabled-primary-small-line {
+.sh-circle-disabled-primary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   box-shadow: 0 0 0 1px $disabled-02 inset;
   .text {
@@ -567,7 +567,7 @@
     color: $disabled-02;
   }
 }
-.square-enabled-primary-2-large-fill2 {
+.sh-square-enabled-primary-2-large-fill2 {
   @include default-attr;
   @include size-large;
   background-color: $interactive-03;
@@ -576,7 +576,7 @@
     color: $ui-04;
   }
 }
-.square-enabled-primary-2-regular-fill2 {
+.sh-square-enabled-primary-2-regular-fill2 {
   @include default-attr;
   @include size-regular;
   background-color: $interactive-03;
@@ -585,7 +585,7 @@
     color: $ui-04;
   }
 }
-.square-enabled-primary-2-small-fill2 {
+.sh-square-enabled-primary-2-small-fill2 {
   @include default-attr;
   @include size-small;
   background-color: $interactive-03;
@@ -594,7 +594,7 @@
     color: $ui-04;
   }
 }
-.square-pressed-primary-2-large-fill2 {
+.sh-square-pressed-primary-2-large-fill2 {
   @include default-attr;
   @include size-large;
   background-color: $pressed-01;
@@ -603,7 +603,7 @@
     color: $ui-04;
   }
 }
-.square-pressed-primary-2-regular-fill2 {
+.sh-square-pressed-primary-2-regular-fill2 {
   @include default-attr;
   @include size-regular;
   background-color: $pressed-01;
@@ -612,7 +612,7 @@
     color: $ui-04;
   }
 }
-.square-pressed-primary-2-small-fill2 {
+.sh-square-pressed-primary-2-small-fill2 {
   @include default-attr;
   @include size-small;
   background-color: $pressed-01;
@@ -621,7 +621,7 @@
     color: $ui-04;
   }
 }
-.square-disabled-primary-2-large-fill2 {
+.sh-square-disabled-primary-2-large-fill2 {
   @include default-attr;
   @include size-large;
   background-color: $disabled-01;
@@ -630,7 +630,7 @@
     color: $ui-05;
   }
 }
-.square-disabled-primary-2-regular-fill2 {
+.sh-square-disabled-primary-2-regular-fill2 {
   @include default-attr;
   @include size-regular;
   background-color: $disabled-01;
@@ -639,7 +639,7 @@
     color: $ui-05;
   }
 }
-.square-disabled-primary-2-small-fill2 {
+.sh-square-disabled-primary-2-small-fill2 {
   @include default-attr;
   @include size-small;
   background-color: $disabled-01;
@@ -648,9 +648,9 @@
     color: $ui-05;
   }
 }
-.round-enabled-primary-2-large-fill2 {
+.sh-round-enabled-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $interactive-03;
   .text {
@@ -658,9 +658,9 @@
     color: $ui-04;
   }
 }
-.round-enabled-primary-2-regular-fill2 {
+.sh-round-enabled-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $interactive-03;
   .text {
@@ -668,9 +668,9 @@
     color: $ui-04;
   }
 }
-.round-enabled-primary-2-small-fill2 {
+.sh-round-enabled-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $interactive-03;
   .text {
@@ -678,9 +678,9 @@
     color: $ui-04;
   }
 }
-.round-pressed-primary-2-large-fill2 {
+.sh-round-pressed-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $pressed-01;
   .text {
@@ -688,9 +688,9 @@
     color: $ui-04;
   }
 }
-.round-pressed-primary-2-regular-fill2 {
+.sh-round-pressed-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $pressed-01;
   .text {
@@ -698,9 +698,9 @@
     color: $ui-04;
   }
 }
-.round-pressed-primary-2-small-fill2 {
+.sh-round-pressed-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $pressed-01;
   .text {
@@ -708,9 +708,9 @@
     color: $ui-04;
   }
 }
-.round-disabled-primary-2-large-fill2 {
+.sh-round-disabled-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $disabled-01;
   .text {
@@ -718,9 +718,9 @@
     color: $ui-05;
   }
 }
-.round-disabled-primary-2-regular-fill2 {
+.sh-round-disabled-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $disabled-01;
   .text {
@@ -728,9 +728,9 @@
     color: $ui-05;
   }
 }
-.round-disabled-primary-2-small-fill2 {
+.sh-round-disabled-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $disabled-01;
   .text {
@@ -738,9 +738,9 @@
     color: $ui-05;
   }
 }
-.circle-enabled-primary-2-large-fill2 {
+.sh-circle-enabled-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $interactive-03;
   .text {
@@ -748,9 +748,9 @@
     color: $ui-04;
   }
 }
-.circle-enabled-primary-2-regular-fill2 {
+.sh-circle-enabled-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $interactive-03;
   .text {
@@ -758,9 +758,9 @@
     color: $ui-04;
   }
 }
-.circle-enabled-primary-2-small-fill2 {
+.sh-circle-enabled-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $interactive-03;
   .text {
@@ -768,9 +768,9 @@
     color: $ui-04;
   }
 }
-.circle-pressed-primary-2-large-fill2 {
+.sh-circle-pressed-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $pressed-01;
   .text {
@@ -778,9 +778,9 @@
     color: $ui-04;
   }
 }
-.circle-pressed-primary-2-regular-fill2 {
+.sh-circle-pressed-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $pressed-01;
   .text {
@@ -788,9 +788,9 @@
     color: $ui-04;
   }
 }
-.circle-pressed-primary-2-small-fill2 {
+.sh-circle-pressed-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $pressed-01;
   .text {
@@ -798,9 +798,9 @@
     color: $ui-04;
   }
 }
-.circle-disabled-primary-2-large-fill2 {
+.sh-circle-disabled-primary-2-large-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $disabled-01;
   .text {
@@ -808,9 +808,9 @@
     color: $ui-05;
   }
 }
-.circle-disabled-primary-2-regular-fill2 {
+.sh-circle-disabled-primary-2-regular-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $disabled-01;
   .text {
@@ -818,9 +818,9 @@
     color: $ui-05;
   }
 }
-.circle-disabled-primary-2-small-fill2 {
+.sh-circle-disabled-primary-2-small-fill2 {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $disabled-01;
   .text {
@@ -828,7 +828,7 @@
     color: $ui-05;
   }
 }
-.square-enabled-secondary-large-fill {
+.sh-square-enabled-secondary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $interactive-02;
@@ -837,7 +837,7 @@
     color: $text-04;
   }
 }
-.square-enabled-secondary-regular-fill {
+.sh-square-enabled-secondary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $interactive-02;
@@ -846,7 +846,7 @@
     color: $text-04;
   }
 }
-.square-enabled-secondary-small-fill {
+.sh-square-enabled-secondary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $interactive-02;
@@ -855,7 +855,7 @@
     color: $text-04;
   }
 }
-.square-pressed-secondary-large-fill {
+.sh-square-pressed-secondary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $pressed-03;
@@ -864,7 +864,7 @@
     color: $text-04;
   }
 }
-.square-pressed-secondary-regular-fill {
+.sh-square-pressed-secondary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $pressed-03;
@@ -873,7 +873,7 @@
     color: $text-04;
   }
 }
-.square-pressed-secondary-small-fill {
+.sh-square-pressed-secondary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $pressed-03;
@@ -882,7 +882,7 @@
     color: $text-04;
   }
 }
-.square-disabled-secondary-large-fill {
+.sh-square-disabled-secondary-large-fill {
   @include default-attr;
   @include size-large;
   background-color: $disabled-03;
@@ -891,7 +891,7 @@
     color: $text-04;
   }
 }
-.square-disabled-secondary-regular-fill {
+.sh-square-disabled-secondary-regular-fill {
   @include default-attr;
   @include size-regular;
   background-color: $disabled-03;
@@ -900,7 +900,7 @@
     color: $text-04;
   }
 }
-.square-disabled-secondary-small-fill {
+.sh-square-disabled-secondary-small-fill {
   @include default-attr;
   @include size-small;
   background-color: $disabled-03;
@@ -909,99 +909,9 @@
     color: $text-04;
   }
 }
-.round-enabled-secondary-large-fill {
+.sh-round-enabled-secondary-large-fill {
   @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $interactive-02;
-  .text {
-    @include font-button-L;
-    color: $text-04;
-  }
-}
-.round-enabled-secondary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $interactive-02;
-  .text {
-    @include font-button-M;
-    color: $text-04;
-  }
-}
-.round-enabled-secondary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $interactive-02;
-  .text {
-    @include font-button-S;
-    color: $text-04;
-  }
-}
-.round-pressed-secondary-large-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $pressed-03;
-  .text {
-    @include font-button-L;
-    color: $text-04;
-  }
-}
-.round-pressed-secondary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $pressed-03;
-  .text {
-    @include font-button-M;
-    color: $text-04;
-  }
-}
-.round-pressed-secondary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $pressed-03;
-  .text {
-    @include font-button-S;
-    color: $text-04;
-  }
-}
-.round-disabled-secondary-large-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-large;
-  background-color: $disabled-03;
-  .text {
-    @include font-button-L;
-    color: $text-04;
-  }
-}
-.round-disabled-secondary-regular-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-regular;
-  background-color: $disabled-03;
-  .text {
-    @include font-button-M;
-    color: $text-04;
-  }
-}
-.round-disabled-secondary-small-fill {
-  @include default-attr;
-  @include radius-round;
-  @include size-small;
-  background-color: $disabled-03;
-  .text {
-    @include font-button-S;
-    color: $text-04;
-  }
-}
-.circle-enabled-secondary-large-fill {
-  @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $interactive-02;
   .text {
@@ -1009,9 +919,9 @@
     color: $text-04;
   }
 }
-.circle-enabled-secondary-regular-fill {
+.sh-round-enabled-secondary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $interactive-02;
   .text {
@@ -1019,9 +929,9 @@
     color: $text-04;
   }
 }
-.circle-enabled-secondary-small-fill {
+.sh-round-enabled-secondary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $interactive-02;
   .text {
@@ -1029,9 +939,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-secondary-large-fill {
+.sh-round-pressed-secondary-large-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $pressed-03;
   .text {
@@ -1039,9 +949,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-secondary-regular-fill {
+.sh-round-pressed-secondary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $pressed-03;
   .text {
@@ -1049,9 +959,9 @@
     color: $text-04;
   }
 }
-.circle-pressed-secondary-small-fill {
+.sh-round-pressed-secondary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $pressed-03;
   .text {
@@ -1059,9 +969,9 @@
     color: $text-04;
   }
 }
-.circle-disabled-secondary-large-fill {
+.sh-round-disabled-secondary-large-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-large;
   background-color: $disabled-03;
   .text {
@@ -1069,9 +979,9 @@
     color: $text-04;
   }
 }
-.circle-disabled-secondary-regular-fill {
+.sh-round-disabled-secondary-regular-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $disabled-03;
   .text {
@@ -1079,9 +989,9 @@
     color: $text-04;
   }
 }
-.circle-disabled-secondary-small-fill {
+.sh-round-disabled-secondary-small-fill {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-round;
   @include size-small;
   background-color: $disabled-03;
   .text {
@@ -1089,7 +999,97 @@
     color: $text-04;
   }
 }
-.square-enabled-secondary-large-line {
+.sh-circle-enabled-secondary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $interactive-02;
+  .text {
+    @include font-button-L;
+    color: $text-04;
+  }
+}
+.sh-circle-enabled-secondary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $interactive-02;
+  .text {
+    @include font-button-M;
+    color: $text-04;
+  }
+}
+.sh-circle-enabled-secondary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $interactive-02;
+  .text {
+    @include font-button-S;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-secondary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $pressed-03;
+  .text {
+    @include font-button-L;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-secondary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $pressed-03;
+  .text {
+    @include font-button-M;
+    color: $text-04;
+  }
+}
+.sh-circle-pressed-secondary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $pressed-03;
+  .text {
+    @include font-button-S;
+    color: $text-04;
+  }
+}
+.sh-circle-disabled-secondary-large-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-large;
+  background-color: $disabled-03;
+  .text {
+    @include font-button-L;
+    color: $text-04;
+  }
+}
+.sh-circle-disabled-secondary-regular-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-regular;
+  background-color: $disabled-03;
+  .text {
+    @include font-button-M;
+    color: $text-04;
+  }
+}
+.sh-circle-disabled-secondary-small-fill {
+  @include default-attr;
+  @include radius-sh-circle;
+  @include size-small;
+  background-color: $disabled-03;
+  .text {
+    @include font-button-S;
+    color: $text-04;
+  }
+}
+.sh-square-enabled-secondary-large-line {
   @include default-attr;
   @include size-large;
   background-color: $interactive-05;
@@ -1099,7 +1099,7 @@
     color: $text-01;
   }
 }
-.square-enabled-secondary-regular-line {
+.sh-square-enabled-secondary-regular-line {
   @include default-attr;
   @include size-regular;
   background-color: $interactive-05;
@@ -1109,7 +1109,7 @@
     color: $text-01;
   }
 }
-.square-enabled-secondary-small-line {
+.sh-square-enabled-secondary-small-line {
   @include default-attr;
   @include size-small;
   background-color: $interactive-05;
@@ -1119,7 +1119,7 @@
     color: $text-01;
   }
 }
-.square-pressed-secondary-large-line {
+.sh-square-pressed-secondary-large-line {
   @include default-attr;
   @include size-large;
   background-color: $pressed-04;
@@ -1129,7 +1129,7 @@
     color: $text-01;
   }
 }
-.square-pressed-secondary-regular-line {
+.sh-square-pressed-secondary-regular-line {
   @include default-attr;
   @include size-regular;
   background-color: $pressed-04;
@@ -1139,7 +1139,7 @@
     color: $text-01;
   }
 }
-.square-pressed-secondary-small-line {
+.sh-square-pressed-secondary-small-line {
   @include default-attr;
   @include size-small;
   background-color: $pressed-04;
@@ -1149,7 +1149,7 @@
     color: $text-01;
   }
 }
-.square-disabled-secondary-large-line {
+.sh-square-disabled-secondary-large-line {
   @include default-attr;
   @include size-large;
   box-shadow: 0 0 0 1px $disabled-03 inset;
@@ -1158,7 +1158,7 @@
     color: $disabled-03;
   }
 }
-.square-disabled-secondary-regular-line {
+.sh-square-disabled-secondary-regular-line {
   @include default-attr;
   @include size-regular;
   box-shadow: 0 0 0 1px $disabled-03 inset;
@@ -1167,7 +1167,7 @@
     color: $disabled-03;
   }
 }
-.square-disabled-secondary-small-line {
+.sh-square-disabled-secondary-small-line {
   @include default-attr;
   @include size-small;
   box-shadow: 0 0 0 1px $disabled-03 inset;
@@ -1176,9 +1176,9 @@
     color: $disabled-03;
   }
 }
-.round-enabled-secondary-large-line {
+.sh-round-enabled-secondary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1187,9 +1187,9 @@
     color: $text-01;
   }
 }
-.round-enabled-secondary-regular-line {
+.sh-round-enabled-secondary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1198,9 +1198,9 @@
     color: $text-01;
   }
 }
-.round-enabled-secondary-small-line {
+.sh-round-enabled-secondary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1209,9 +1209,9 @@
     color: $text-01;
   }
 }
-.round-pressed-secondary-large-line {
+.sh-round-pressed-secondary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1220,9 +1220,9 @@
     color: $text-01;
   }
 }
-.round-pressed-secondary-regular-line {
+.sh-round-pressed-secondary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1231,9 +1231,9 @@
     color: $text-01;
   }
 }
-.round-pressed-secondary-small-line {
+.sh-round-pressed-secondary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1242,9 +1242,9 @@
     color: $text-01;
   }
 }
-.round-disabled-secondary-large-line {
+.sh-round-disabled-secondary-large-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-large;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {
@@ -1252,9 +1252,9 @@
     color: $disabled-03;
   }
 }
-.round-disabled-secondary-regular-line {
+.sh-round-disabled-secondary-regular-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-regular;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {
@@ -1262,9 +1262,9 @@
     color: $disabled-03;
   }
 }
-.round-disabled-secondary-small-line {
+.sh-round-disabled-secondary-small-line {
   @include default-attr;
-  @include radius-round;
+  @include radius-sh-round;
   @include size-small;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {
@@ -1272,9 +1272,9 @@
     color: $disabled-03;
   }
 }
-.circle-enabled-secondary-large-line {
+.sh-circle-enabled-secondary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1283,9 +1283,9 @@
     color: $text-01;
   }
 }
-.circle-enabled-secondary-regular-line {
+.sh-circle-enabled-secondary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1294,9 +1294,9 @@
     color: $text-01;
   }
 }
-.circle-enabled-secondary-small-line {
+.sh-circle-enabled-secondary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $interactive-05;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1305,9 +1305,9 @@
     color: $text-01;
   }
 }
-.circle-pressed-secondary-large-line {
+.sh-circle-pressed-secondary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1316,9 +1316,9 @@
     color: $text-01;
   }
 }
-.circle-pressed-secondary-regular-line {
+.sh-circle-pressed-secondary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1327,9 +1327,9 @@
     color: $text-01;
   }
 }
-.circle-pressed-secondary-small-line {
+.sh-circle-pressed-secondary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   background-color: $pressed-04;
   box-shadow: 0 0 0 1px $text-01 inset;
@@ -1338,9 +1338,9 @@
     color: $text-01;
   }
 }
-.circle-disabled-secondary-large-line {
+.sh-circle-disabled-secondary-large-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-large;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {
@@ -1348,9 +1348,9 @@
     color: $disabled-03;
   }
 }
-.circle-disabled-secondary-regular-line {
+.sh-circle-disabled-secondary-regular-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-regular;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {
@@ -1358,9 +1358,9 @@
     color: $disabled-03;
   }
 }
-.circle-disabled-secondary-small-line {
+.sh-circle-disabled-secondary-small-line {
   @include default-attr;
-  @include radius-circle;
+  @include radius-sh-circle;
   @include size-small;
   box-shadow: 0 0 0 1px $disabled-03 inset;
   .text {

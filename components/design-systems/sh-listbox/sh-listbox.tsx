@@ -10,7 +10,7 @@ import "styles/components/design-systems/sh-listbox.scss";
 
 interface SHListboxParams {
   leftContainer?: {
-    type: "icon" | "image";
+    type: "ico" | "img";
     image: HTMLImageElement;
   };
   lineType: 1 | 2 | 3;
@@ -31,7 +31,7 @@ export default function SHListbox({
   onClick,
 }: SHListboxParams) {
   const leftIconsize: number =
-    leftContainer?.type === "icon" ? 40 : lineType === 1 ? 56 : 60;
+    leftContainer?.type === "ico" ? 40 : lineType === 1 ? 56 : 60;
 
   return (
     <div
@@ -48,7 +48,7 @@ export default function SHListbox({
           alt=""
         />
       )}
-      <div className="text-container">
+      <div className="txt-container">
         <p className="title">{text[0]}</p>
         <p className="subtitle">{text[1]}</p>
       </div>
@@ -56,7 +56,7 @@ export default function SHListbox({
         <div className="right-container">
           {rightContainer.type === "button" ? (
             <div className="btn">
-              <p className="text">{rightContainer.text}</p>
+              <p className="txt">{rightContainer.text}</p>
             </div>
           ) : (
             <Image

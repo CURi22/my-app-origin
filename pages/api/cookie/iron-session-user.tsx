@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { IronSessionOptions } from "iron-session";
 import { withIronSessionApiRoute } from "iron-session/next";
 
-export interface IronSessionUser {
+export interface IronSessionUserProps {
   server?: {
     id: number;
     token: string;
@@ -16,7 +16,7 @@ export interface IronSessionUser {
 
 declare module "iron-session" {
   interface IronSessionData {
-    user?: IronSessionUser;
+    user?: IronSessionUserProps;
   }
 }
 
@@ -26,7 +26,7 @@ async function nextAPIHandler(
 ): Promise<void> {
   switch (req.method) {
     case "GET":
-      const user: IronSessionUser | undefined = req.session.user;
+      const user: IronSessionUserProps | undefined = req.session.user;
 
       res.send(user ?? {});
 

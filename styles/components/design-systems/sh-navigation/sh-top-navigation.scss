@@ -1,11 +1,11 @@
 @import "/styles/design-systems/color-system.scss";
 @import "/styles/design-systems/typography.scss";
 
-.sh-top-navigation-container {
+.sh-top-nav-container {
   @mixin title-container {
     @include font-headline-S;
     flex: 1;
-    .text {
+    .txt {
       color: $text-02;
     }
   }
@@ -19,7 +19,7 @@
     justify-content: center;
     width: 60px;
     height: 48px;
-    .text {
+    .txt {
       @include font-body-M;
       color: $text-03;
     }
@@ -47,7 +47,7 @@
     justify-content: center;
     width: 60px;
     height: 48px;
-    .text {
+    .txt {
       @include font-body-M;
       color: $interactive-04;
     }

@@ -17,7 +17,7 @@ interface SHButtonParams {
 export default function SHButton({ category, text, onClick }: SHButtonParams) {
   return (
     <div
-      className={`${category.shape}-${category.status}-${category.color}-${category.size}-${category.line}`}
+      className={`sh-${category.shape}-${category.status}-${category.color}-${category.size}-${category.line}`}
       onClick={onClick}
       tabIndex={0}
     >
