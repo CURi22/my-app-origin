@@ -15,7 +15,7 @@ import xCircle from "public/icons/x-circle.svg";
 import eyeOn from "public/icons/eye-on.svg";
 import eyeOff from "public/icons/eye-off.svg";
 
-import "styles/components/design-systems/sh-input/sh-input.scss";
+import "styles/components/design-systems/sh-input.scss";
 
 interface SHInputParams {
   category:

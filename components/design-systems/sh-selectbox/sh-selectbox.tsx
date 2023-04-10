@@ -8,7 +8,7 @@ import SelectboxList from "./selectbox-list";
 import arrowDown from "public/icons/arrow-down-fill.svg";
 import arrowUp from "public/icons/arrow-up-fill.svg";
 
-import "styles/components/design-systems/sh-selectbox/sh-selectbox.scss";
+import "styles/components/design-systems/sh-selectbox.scss";
 
 interface SHSelectboxParams {
   helper?: string;

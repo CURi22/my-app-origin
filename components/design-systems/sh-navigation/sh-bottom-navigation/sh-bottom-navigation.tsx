@@ -6,7 +6,7 @@ import menuSample from "public/icons/menu-sample.svg";
 import ellipse from "public/icons/ellipse.svg";
 import ellipseOff from "public/icons/ellipse-light.svg";
 
-import "styles/components/design-systems/sh-navigation/sh-bottom-navigation/sh-bottom-navigation.scss";
+import "styles/components/design-systems/sh-navigation/sh-bottom-navigation.scss";
 
 interface SHBottomNavigationParams {
   activated?: "menu1" | "menu2" | "menu3" | "menu4" | "menu5";

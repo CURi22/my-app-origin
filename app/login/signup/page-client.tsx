@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { IronSessionUser } from "pages/api/cookie/iron-session";
+import { IronSessionUser } from "pages/api/cookie/iron-session-user";
 import { fetchModule } from "utils/fetch/fetch-module";
 import { uriSource } from "utils/uri-source";
 

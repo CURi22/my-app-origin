@@ -7,7 +7,7 @@ import chevronLeft from "public/icons/chevron-left.svg";
 import chevronRight from "public/icons/chevron-right.svg";
 import xIcon from "public/icons/x-icon.svg";
 
-import "styles/components/design-systems/sh-navigation/sh-top-navigation/sh-top-navigation.scss";
+import "styles/components/design-systems/sh-navigation/sh-top-navigation.scss";
 
 interface LeftContainerParams {
   type: "arrow" | "cancle";

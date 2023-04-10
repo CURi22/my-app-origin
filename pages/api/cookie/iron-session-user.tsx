@@ -52,7 +52,7 @@ async function nextAPIHandler(
 
     default:
       res.status(400);
-      res.send({});
+      res.send({ error: "no message" });
   }
 }
 
@@ -61,7 +61,7 @@ const ironSessionOption: IronSessionOptions = {
     process.env.IRON_COOKIE_NAME ??
     "Temporary created cookie name by occurding error",
   password:
-    process.env.IRON_COOKIE_PASSWORD ?? "2YP7n3qbCje3Msgav3sV12HZHi4JdDAV",
+    process.env.IRON_COOKIE_PASSWORD ?? "kX5pEB4i7QFE2s3gUEWg4B20uVu8szTU",
 };
 
 export default withIronSessionApiRoute(nextAPIHandler, ironSessionOption);

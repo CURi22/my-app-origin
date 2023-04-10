@@ -1,6 +1,6 @@
 "use client";
 
-import "styles/components/design-systems/an-button/an-button.scss";
+import "styles/components/design-systems/sh-button.scss";
 
 interface SHButtonParams {
   category: {

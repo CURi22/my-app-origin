@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 
 import { HorizontalDragTab } from "components/horizontal-drag-tab/horizontal-drag-tab";
 
-import "styles/components/design-systems/sh-tab/sh-tab-box/sh-tab-box.scss";
+import "styles/components/design-systems/sh-tab/sh-tab-box.scss";
 
 interface SHTabBoxParams {
   defaultIdx?: number;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import "styles/components/design-systems/sh-tab/sh-tab-bar/sh-tab-bar.scss";
+import "styles/components/design-systems/sh-tab/sh-tab-bar.scss";
 
 interface SHTabBarParams {
   defaultIdx?: number;

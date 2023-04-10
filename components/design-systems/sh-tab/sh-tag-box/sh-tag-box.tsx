@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 
 import { HorizontalDragTab } from "components/horizontal-drag-tab/horizontal-drag-tab";
 
-import "styles/components/design-systems/sh-tab/sh-tag-box/sh-tag-box.scss";
+import "styles/components/design-systems/sh-tab/sh-tag-box.scss";
 
 interface SHTagBoxParams {
   tabs: string[];

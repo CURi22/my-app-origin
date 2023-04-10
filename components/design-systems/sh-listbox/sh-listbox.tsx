@@ -6,7 +6,7 @@ import React from "react";
 import sampleOn from "public/icons/sample.svg";
 import sampleOff from "public/icons/sample-2.svg";
 
-import "styles/components/design-systems/sh-listbox/sh-listbox.scss";
+import "styles/components/design-systems/sh-listbox.scss";
 
 interface SHListboxParams {
   leftContainer?: {

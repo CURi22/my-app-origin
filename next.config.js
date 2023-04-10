@@ -39,17 +39,17 @@ const navigatiors = [
 
 const endpoints = [
   {
-    source: "/api/session",
-    destination: "/api/cookie/iron-session",
+    source: "/api/session/user",
+    destination: "/api/cookie/iron-session-user",
   },
 ];
 
 const nextConfig = {
   experimental: { appDir: true },
   reactStrictMode: true,
-  async redirects() {
-    return [];
-  },
+  // async redirects() {
+  //   return [];
+  // },
   async rewrites() {
     return [...navigatiors, ...endpoints];
   },

@@ -9,7 +9,7 @@ import magnifier from "public/icons/search.svg";
 import magnifier2 from "public/icons/search-light.svg";
 import magnifier3 from "public/icons/search-light-2.svg";
 
-import "styles/components/design-systems/sh-search-bar/sh-search-bar.scss";
+import "styles/components/design-systems/sh-search-bar.scss";
 
 interface SHSearchBarParams {
   category: "fill" | "line";

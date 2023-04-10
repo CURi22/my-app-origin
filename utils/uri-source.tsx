@@ -3,5 +3,5 @@ interface URISource {
 }
 
 export const uriSource: URISource = {
-  session: "/api/session",
+  session: "/api/session/user",
 };
